@@ -1,4 +1,5 @@
 #include <MainQuiz.h>
+#include <Dictonary.h>
 #include <iostream>
 
 using std::cout;
@@ -11,7 +12,7 @@ Quiz::Quiz(string theme) : theme(theme)
 
 void Quiz::init()
 {
-
+  init_questions();
   if(this->theme.compare("Rel")==0)
     this->rel_handler();
   else if(this->theme.compare("Ren")==0)
@@ -26,7 +27,16 @@ void Quiz::init()
 
 void Quiz::rel_handler()
 {
-  cout << "Religion HANDLER" << endl;
+ cout << "***Religion (overview) multiple choice questions***" << endl;
+ for(int i=0; i<7; i++)
+ {
+   cout << "QUESTION #" << (i+1) << " : " << questions_religion[i].question << endl;
+   for(int j=0; j<4; i++)
+   {
+     cout << (j+1) << ") " << questions_religion[i].opts.mc.attempts[0] << endl;
+   }
+ }
+ while(1);
 }
 
 

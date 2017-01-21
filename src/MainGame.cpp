@@ -76,7 +76,7 @@ void Game::init_round()
     }
 
   Quiz quiz_instance(this->theme);
-  quiz_instance.init();  
+  quiz_instance.init();
 }
 
 void Game::last_state()
@@ -84,7 +84,7 @@ void Game::last_state()
   cout << endl << "EXITING GAME" << endl;
 }
 
-//TODO : Implement Instructions
+
 void Game::print_inst()
 {
   string tmpp;
@@ -105,6 +105,7 @@ void Game::main_menu()
   cout << "\t\t\t MIDTERM REVIEW QUESTIONS\t\n" << endl;
   cout << "\t\t\t ------------------------\t\n\n" << endl;
   cout << "\t   Program created by Amanuel Bogale under MIT Licence\n" << endl;
+  cout << "\tSource code located : https://github.com/amanuel2/MidtermHistoryCode\n" << endl;
   cout << "****************************************************************\n\n" << endl;
   cout << "Commands\n" << endl;
   cout << "--------\n" << endl;
