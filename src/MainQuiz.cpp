@@ -4,6 +4,7 @@
 
 using std::cout;
 using std::endl;
+using std::cin;
 
 Quiz::Quiz(string theme) : theme(theme)
 {
@@ -27,14 +28,17 @@ void Quiz::init()
 
 void Quiz::rel_handler()
 {
+ string answer_user;
  cout << "***Religion (overview) multiple choice questions***" << endl;
  for(int i=0; i<7; i++)
  {
    cout << "QUESTION #" << (i+1) << " : " << questions_religion[i].question << endl;
-   for(int j=0; j<4; i++)
-   {
-     cout << (j+1) << ") " << questions_religion[i].opts.mc.attempts[0] << endl;
-   }
+   for(int j=0; j<4; j++)
+     cout << (j+1) << ") " << questions_religion[i].opts.mc.attempts[j] << endl;
+   cout << endl << "What is your answer?(1-4) : ";
+   cin >> answer_user;
+   int answer_user_index = stoi(answer_user);
+   cout << "You Answered " << questions_religion[0].opts.mc.attempts[answer_user_index] << endl;
  }
  while(1);
 }
