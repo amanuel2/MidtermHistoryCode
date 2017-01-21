@@ -18,4 +18,10 @@ private:
   void exp_handler();
   void abs_handler();
   string theme;
+
+  void print_final_results();
+
+  int questions_right=0;
+  int questions_wrong=0;
+  int num_questions=0;
 };

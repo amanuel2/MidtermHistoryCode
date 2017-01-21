@@ -1,6 +1,7 @@
 #include <MainQuiz.h>
 #include <Dictonary.h>
 #include <iostream>
+#include <string.h>
 
 using std::cout;
 using std::endl;
@@ -28,21 +29,34 @@ void Quiz::init()
 
 void Quiz::rel_handler()
 {
+ num_questions = 8;
  string answer_user;
  cout << "***Religion (overview) multiple choice questions***" << endl;
- for(int i=0; i<7; i++)
+ for(int i=0; i<8; i++)
  {
    cout << "QUESTION #" << (i+1) << " : " << questions_religion[i].question << endl;
    for(int j=0; j<4; j++)
      cout << (j+1) << ") " << questions_religion[i].opts.mc.attempts[j] << endl;
    cout << endl << "What is your answer?(1-4) : ";
    cin >> answer_user;
-   int answer_user_index = stoi(answer_user);
-   cout << "You Answered " << questions_religion[0].opts.mc.attempts[answer_user_index] << endl;
+   cout << endl;
+   int answer_user_index = atoi(answer_user.c_str());
+   answer_user = questions_religion[i].opts.mc.attempts[answer_user_index-1];
+
+   if(answer_user.compare(questions_religion[i].opts.answer)==0)
+    this->questions_right+=1;
+   else
+    this->questions_wrong+=1;
  }
- while(1);
+ this->print_final_results();
 }
 
+void Quiz::print_final_results()
+{
+  cout << "********************* RESULTS *********************" << endl;
+  cout << "TOTAL CORRECT : " << this->questions_right << endl;
+  cout << "TOTAL INCORRECT : " << this->questions_wrong << endl;
+}
 
 void Quiz::ren_handler()
 {
