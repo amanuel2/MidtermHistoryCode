@@ -1,0 +1,6 @@
+# GCH Atom Files
+*.gch
+
+#Output Files
+*.out
+*.o
