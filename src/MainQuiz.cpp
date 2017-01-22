@@ -1,11 +1,13 @@
 #include <MainQuiz.h>
-#include <Dictonary.h>
 #include <iostream>
 #include <string.h>
+#include <Dictonary.h>
 
 using std::cout;
 using std::endl;
 using std::cin;
+
+
 
 Quiz::Quiz(string theme) : theme(theme)
 {
@@ -60,13 +62,51 @@ void Quiz::print_final_results()
 
 void Quiz::ren_handler()
 {
-  cout << "Renaissance HANDLER" << endl;
+  num_questions = 4;
+  string answer_user;
+  cout << "***Rennaisance multiple choice questions***" << endl;
+  for(int i=0; i<4; i++)
+  {
+    cout << "QUESTION #" << (i+1) << " : " << questions_renaissance[i].question << endl;
+    for(int j=0; j<4; j++)
+      cout << (j+1) << ") " << questions_renaissance[i].opts.mc.attempts[j] << endl;
+    cout << endl << "What is your answer?(1-4) : ";
+    cin >> answer_user;
+    cout << endl;
+    int answer_user_index = atoi(answer_user.c_str());
+    answer_user = questions_renaissance[i].opts.mc.attempts[answer_user_index-1];
+
+    if(answer_user.compare(questions_renaissance[i].opts.answer)==0)
+     this->questions_right+=1;
+    else
+     this->questions_wrong+=1;
+  }
+  this->print_final_results();
 }
 
 
 void Quiz::ref_handler()
 {
-  cout << "Reformation HANDLER" << endl;
+  num_questions = 6;
+  string answer_user;
+  cout << "***Reformation multiple choice questions***" << endl;
+  for(int i=0; i<6; i++)
+  {
+    cout << "QUESTION #" << (i+1) << " : " << questions_reformation[i].question << endl;
+    for(int j=0; j<4; j++)
+      cout << (j+1) << ") " << questions_reformation[i].opts.mc.attempts[j] << endl;
+    cout << endl << "What is your answer?(1-4) : ";
+    cin >> answer_user;
+    cout << endl;
+    int answer_user_index = atoi(answer_user.c_str());
+    answer_user = questions_reformation[i].opts.mc.attempts[answer_user_index-1];
+
+    if(answer_user.compare(questions_reformation[i].opts.answer)==0)
+     this->questions_right+=1;
+    else
+     this->questions_wrong+=1;
+  }
+  this->print_final_results();
 }
 
 

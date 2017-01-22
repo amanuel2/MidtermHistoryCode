@@ -23,6 +23,9 @@ typedef struct
 }question_t;
 
 question_t questions_religion[7];
+question_t questions_renaissance[3];
+question_t questions_reformation[5];
+
 
 void init_questions()
 {
@@ -82,4 +85,75 @@ void init_questions()
   questions_religion[7].opts.mc.attempts[2].assign("Christianity,Confucianism,Islam");
   questions_religion[7].opts.mc.attempts[3].assign("Judaism,Daoism,Buddhism");
 
+  questions_renaissance[0].question = "What was the difference between medieval European culture and Renaissance culture?";
+  questions_renaissance[0].opts.answer = "The Middle Ages was a period from the 5th to 16th centuries. The Renaissance was the period between the 14th and the 16th centuries.";
+  questions_renaissance[0].opts.mc.attempts[0].assign("There is no difference.");
+  questions_renaissance[0].opts.mc.attempts[1].assign("The Middle Ages was a period from the 5th to 16th centuries. The Renaissance was the period between the 14th and the 16th centuries.");
+  questions_renaissance[0].opts.mc.attempts[2].assign("Christianity,Confucianism,Islam");
+  questions_renaissance[0].opts.mc.attempts[3].assign("Middle ages didnt exist.");
+
+  questions_renaissance[1].question = "Define humanism. How did it relate to the Renaissance?";
+  questions_renaissance[1].opts.answer = "A system of values and beliefs that is based on the idea that people are basically good and that problems can be solved using reason instead of religion.";
+  questions_renaissance[1].opts.mc.attempts[0].assign("Humanism was the act of being human.");
+  questions_renaissance[1].opts.mc.attempts[1].assign("People are terrible.");
+  questions_renaissance[1].opts.mc.attempts[2].assign("A system of values and beliefs that is based on the idea that people are basically good and that problems can be solved using reason instead of religion.");
+  questions_renaissance[1].opts.mc.attempts[3].assign("A system where problems can be solved via religion.");
+
+  questions_renaissance[2].question = "What were the causes of Renaissance?";
+  questions_renaissance[2].opts.answer = "secularism,humanism, questioning of ideas, traditions, and institutions";
+  questions_renaissance[2].opts.mc.attempts[0].assign("secularism,humanism, questioning of ideas, traditions, and institutions");
+  questions_renaissance[2].opts.mc.attempts[1].assign("That is not a thing.");
+  questions_renaissance[2].opts.mc.attempts[2].assign("Religions were the cause");
+  questions_renaissance[2].opts.mc.attempts[3].assign("Revolution of people caused this because of unfair state.");
+
+  questions_renaissance[3].question = "What were the acomplishments of the following : Shakespeare , Machiavelli, and Gutenberg?";
+  questions_renaissance[3].opts.answer = "Shakesphere was known for making poets, Machiavelli was a major poltiacal scientist, Gutenberg introduced printing.";
+  questions_renaissance[3].opts.mc.attempts[0].assign("secularism,humanism, questioning of ideas, traditions, and institutions");
+  questions_renaissance[3].opts.mc.attempts[1].assign("That is not a thing.");
+  questions_renaissance[3].opts.mc.attempts[2].assign("Shakesphere was known for making poets, Machiavelli was a major poltiacal scientist, Gutenberg introduced printing.");
+  questions_renaissance[3].opts.mc.attempts[3].assign("They had no acomplishments.");
+
+  questions_reformation[0].question = "What was the protestant reformation?";
+  questions_reformation[0].opts.answer = "The Protestant Reformation was the 16th-century religious, political, intellectual and cultural upheaval that splintered Catholic Europe, setting in place the structures and beliefs that would define the continent in the modern era.";
+  questions_reformation[0].opts.mc.attempts[0].assign("secularism,humanism, questioning of ideas, traditions, and institutions");
+  questions_reformation[0].opts.mc.attempts[1].assign("The Protestant Reformation was the 16th-century religious, political, intellectual and cultural upheaval that splintered Catholic Europe, setting in place the structures and beliefs that would define the continent in the modern era.");
+  questions_reformation[0].opts.mc.attempts[2].assign("Shakesphere was known for making poets, Machiavelli was a major poltiacal scientist, Gutenberg introduced printing.");
+  questions_reformation[0].opts.mc.attempts[3].assign("There is nothing called like so");
+
+  questions_reformation[1].question = "What role did Marthin Luther Play in Reformation?";
+  questions_reformation[1].opts.answer = "Was a priest who made the 95-thesis which started reformation.";
+  questions_reformation[1].opts.mc.attempts[0].assign("No role what so ever.");
+  questions_reformation[1].opts.mc.attempts[1].assign("The Protestant Reformation was the 16th-century religious, political, intellectual and cultural upheaval that splintered Catholic Europe, setting in place the structures and beliefs that would define the continent in the modern era.");
+  questions_reformation[1].opts.mc.attempts[2].assign("Shakesphere was known for making poets, Machiavelli was a major poltiacal scientist, Gutenberg introduced printing.");
+  questions_reformation[1].opts.mc.attempts[3].assign("Was a priest who made the 95-thesis which started reformation.");
+
+  questions_reformation[2].question = "Why did Henry VII Break from the church?";
+  questions_reformation[2].opts.answer = "Because he wanted to divorce and mary another wife.";
+  questions_reformation[2].opts.mc.attempts[0].assign("No role what so ever.");
+  questions_reformation[2].opts.mc.attempts[1].assign("No reason");
+  questions_reformation[2].opts.mc.attempts[2].assign("Because he wanted to divorce and mary another wife.");
+  questions_reformation[2].opts.mc.attempts[3].assign("Was a priest who made the 95-thesis which started reformation.");
+
+  questions_reformation[3].question = "Who was John Calvin?";
+  questions_reformation[3].opts.answer = "French theologian , who  was a principal figure in the development of the system of Christian theology later called Calvinism.";
+  questions_reformation[3].opts.mc.attempts[0].assign("French theologian , who  was a principal figure in the development of the system of Christian theology later called Calvinism.");
+  questions_reformation[3].opts.mc.attempts[1].assign("Priest who was an enlightned thinker.");
+  questions_reformation[3].opts.mc.attempts[2].assign("No one.");
+  questions_reformation[3].opts.mc.attempts[3].assign("That pants brand.");
+
+
+  questions_reformation[4].question = "What descions were made in the council of Trent?";
+  questions_reformation[4].opts.answer = "Catholics and Protestants went against the rise of Reformation.";
+  questions_reformation[4].opts.mc.attempts[0].assign("Catholics and Protestants went against the rise of Reformation.");
+  questions_reformation[4].opts.mc.attempts[1].assign("None.");
+  questions_reformation[4].opts.mc.attempts[2].assign("that the world will end so we need to get prepared.");
+  questions_reformation[4].opts.mc.attempts[3].assign("elightment thinkers should be executed.");
+
+  questions_reformation[5].question = "What were the major effects of Reformation?";
+  questions_reformation[5].opts.answer = "Authority should be delievered by the bible not the pope.";
+  questions_reformation[5].opts.mc.attempts[0].assign("Authority should be delievered by the bible not the pope.");
+  questions_reformation[5].opts.mc.attempts[1].assign("95-thesis");
+  questions_reformation[5].opts.mc.attempts[2].assign("Ended the world");
+  questions_reformation[5].opts.mc.attempts[3].assign("executed enlightment thinkers.");
+  
 }
