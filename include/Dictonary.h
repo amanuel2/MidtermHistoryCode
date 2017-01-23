@@ -25,6 +25,8 @@ typedef struct
 question_t questions_religion[7];
 question_t questions_renaissance[3];
 question_t questions_reformation[5];
+question_t questions_exploration[11];
+question_t question_absolutism[4];
 
 
 void init_questions()
@@ -155,5 +157,113 @@ void init_questions()
   questions_reformation[5].opts.mc.attempts[1].assign("95-thesis");
   questions_reformation[5].opts.mc.attempts[2].assign("Ended the world");
   questions_reformation[5].opts.mc.attempts[3].assign("executed enlightment thinkers.");
-  
+
+  questions_exploration[0].question = "Who was the chiniese explorer of the Ming Dynasity.";
+  questions_exploration[0].opts.answer = "Zheng he.";
+  questions_exploration[0].opts.mc.attempts[0].assign("Zheng he.");
+  questions_exploration[0].opts.mc.attempts[1].assign("Donald Trump.");
+  questions_exploration[0].opts.mc.attempts[2].assign("John Calvin.");
+  questions_exploration[0].opts.mc.attempts[3].assign("None.");
+
+  questions_exploration[1].question = "What capital city of the Byzantine empire was conquered by the Ottoman Turks.";
+  questions_exploration[1].opts.answer = "Istanbul";
+  questions_exploration[1].opts.mc.attempts[0].assign("China City.");
+  questions_exploration[1].opts.mc.attempts[1].assign("Donald Trump City.");
+  questions_exploration[1].opts.mc.attempts[2].assign("Istanbul");
+  questions_exploration[1].opts.mc.attempts[3].assign("None.");
+
+  questions_exploration[2].question = "How did this event lead to European exploration?";
+  questions_exploration[2].opts.answer = "Narrowed land , so want to get more land.";
+  questions_exploration[2].opts.mc.attempts[0].assign("Narrowed land , so want to get more land.");
+  questions_exploration[2].opts.mc.attempts[1].assign("Cause they can.");
+  questions_exploration[2].opts.mc.attempts[2].assign("There was no European exploration.");
+  questions_exploration[2].opts.mc.attempts[3].assign("None.");
+
+  questions_exploration[3].question = "How were Marco Polo's writings influential to future European explorers.";
+  questions_exploration[3].opts.answer = "Wrote a book about his travels, that inspired other explorers.";
+  questions_exploration[3].opts.mc.attempts[0].assign("It wasnt inspiring.");
+  questions_exploration[3].opts.mc.attempts[1].assign("Wrote a book about his travels, that inspired other explorers.");
+  questions_exploration[3].opts.mc.attempts[2].assign("There was no European exploration.");
+  questions_exploration[3].opts.mc.attempts[3].assign("None.");
+
+  questions_exploration[4].question = "What is the signifcance of Christopher Columbus?";
+  questions_exploration[4].opts.answer = "Came to the America's. Traveled many places.";
+  questions_exploration[4].opts.mc.attempts[0].assign("By the first to get to North America");
+  questions_exploration[4].opts.mc.attempts[1].assign("Wrote a book about his travels, that inspired other explorers.");
+  questions_exploration[4].opts.mc.attempts[2].assign("No significance");
+  questions_exploration[4].opts.mc.attempts[3].assign("Came to the America's. Traveled many places.");
+
+  questions_exploration[5].question = "What was the line of Demarcation?";
+  questions_exploration[5].opts.answer = "The Line of Demarcation between Spanish and Portuguese territory was first defined by Pope Alexander VI (1493) and was later revised by the Treaty of Tordesillas (1494). Spain won control of lands discovered west of the line, while Portugal gained rights to new lands to the east.";
+  questions_exploration[5].opts.mc.attempts[0].assign("Straight line crossed with a Diagonal line.");
+  questions_exploration[5].opts.mc.attempts[1].assign("The Line of Demarcation between Spanish and Portuguese territory was first defined by Pope Alexander VI (1493) and was later revised by the Treaty of Tordesillas (1494). Spain won control of lands discovered west of the line, while Portugal gained rights to new lands to the east.");
+  questions_exploration[5].opts.mc.attempts[2].assign("Line that seperrated east and west berlin.");
+  questions_exploration[5].opts.mc.attempts[3].assign("Nothing");
+
+  questions_exploration[6].question = "What was notable of Vasco de Gama , Magellan, Cortez, and Pizarro?";
+  questions_exploration[6].opts.answer = "Vasco de Gama Was the first to reach India by sea , Magellan discovered the straight of Magellan , Cortez defeated Aztec Empire, and Pizarro discovered the Incan empire.";
+  questions_exploration[6].opts.mc.attempts[0].assign("They all are explorers.");
+  questions_exploration[6].opts.mc.attempts[1].assign("They all were men.");
+  questions_exploration[6].opts.mc.attempts[2].assign("Vasco de Gama Was the first to reach India by sea , Magellan discovered the straight of Magellan , Cortez defeated Aztec Empire, and Pizarro discovered the Incan empire.");
+  questions_exploration[6].opts.mc.attempts[3].assign("Nothing Notable.");
+
+  questions_exploration[7].question = "About how many slaves were brought from Afria to the Americas in total?";
+  questions_exploration[7].opts.answer = "12.5 Million";
+  questions_exploration[7].opts.mc.attempts[0].assign("12.5 Million");
+  questions_exploration[7].opts.mc.attempts[1].assign("10 thousand");
+  questions_exploration[7].opts.mc.attempts[3].assign("100 million.");
+  questions_exploration[7].opts.mc.attempts[2].assign("1 million.");
+
+  questions_exploration[8].question = "What were causes and events of Atlantic Slave trade?";
+  questions_exploration[8].opts.answer = "Enormous demand for labor in the plantations.";
+  questions_exploration[8].opts.mc.attempts[0].assign("Unknown cause");
+  questions_exploration[8].opts.mc.attempts[1].assign("Enormous demand for labor in the plantations.");
+  questions_exploration[8].opts.mc.attempts[3].assign("Cause was the white people felt superior.");
+  questions_exploration[8].opts.mc.attempts[2].assign("Atlantic Slave trade didnt happen.");
+
+  questions_exploration[9].question = "What was the triangluar slave trade?";
+  questions_exploration[9].opts.answer = "transatlantic slave trade, that operated from the late 16th to early 19th centuries";
+  questions_exploration[9].opts.mc.attempts[0].assign("Transatlantic slave trade, that operated from the late 16th to early 19th centuries");
+  questions_exploration[9].opts.mc.attempts[1].assign("There was no slave trade.");
+  questions_exploration[9].opts.mc.attempts[3].assign("Cause was the white people felt superior.");
+  questions_exploration[9].opts.mc.attempts[2].assign("Atlantic Slave trade didnt happen.");
+
+  questions_exploration[10].question = "Define Columbian Exchange.";
+  questions_exploration[10].opts.answer = "The Columbian Exchange was the widespread transfer of plants, animals, culture, human populations, technology, and ideas between the Americas and the Old World in the 15th and 16th centuries.";
+  questions_exploration[10].opts.mc.attempts[0].assign("Columbian Exchange was an exchange of goods between Columbia and Prince George County.");
+  questions_exploration[10].opts.mc.attempts[1].assign("The Columbian Exchange was the widespread transfer of plants, animals, culture, human populations, technology, and ideas between the Americas and the Old World in the 15th and 16th centuries.");
+  questions_exploration[10].opts.mc.attempts[3].assign("There is no such thing as the Columbian Exchange.");
+  questions_exploration[10].opts.mc.attempts[2].assign("It was a trade.");
+
+
+
+ question_absolutism[0].question = "Who were the absolute monarch we studied?";
+ question_absolutism[0].opts.answer = "Louis XVI and Mary Antoinette";
+ question_absolutism[0].opts.mc.attempts[0].assign("Donald and Melina Trump.");
+ question_absolutism[0].opts.mc.attempts[1].assign("Henry VII");
+ question_absolutism[0].opts.mc.attempts[3].assign("Louis XVI and Mary Antoinette");
+ question_absolutism[0].opts.mc.attempts[2].assign("Ms.Wallen");
+
+ question_absolutism[1].question = "How did england change after the glorious revolution?";
+ question_absolutism[1].opts.answer = "Replaced king james II , and stopped Catholic Succession.";
+ question_absolutism[1].opts.mc.attempts[0].assign("No such revolution.");
+ question_absolutism[1].opts.mc.attempts[1].assign("England started to have a powerfull military.");
+ question_absolutism[1].opts.mc.attempts[3].assign("Replaced king james II , and stopped Catholic Succession.");
+ question_absolutism[1].opts.mc.attempts[2].assign("England became a threat to the world.");
+
+ question_absolutism[2].question = "Who was the most powerfull in Absolute Monarchy of France?";
+ question_absolutism[2].opts.answer = "Clergy and Church People.";
+ question_absolutism[2].opts.mc.attempts[0].assign("The majority of population");
+ question_absolutism[2].opts.mc.attempts[1].assign("Clergy and Church People.");
+ question_absolutism[2].opts.mc.attempts[3].assign("Royal Family.");
+ question_absolutism[2].opts.mc.attempts[2].assign("The Pope.");
+
+ question_absolutism[3].question = "What were the first, second and third estates?";
+ question_absolutism[3].opts.answer = "First estate were the most powerfull who were catholic clergy , followed by second estate which was royal family which also were powerfull and didnt have to pay tax. Third estate made majority but very poor and had to pay taxes.";
+ question_absolutism[3].opts.mc.attempts[0].assign("First estate were least powerfull(most population) , second being second least powerfull (royal), and third being most powerfull(clergy)");
+ question_absolutism[3].opts.mc.attempts[1].assign("First estate were the most powerfull who were catholic clergy , followed by second estate which was royal family which also were powerfull and didnt have to pay tax. Third estate made majority but very poor and had to pay taxes.");
+ question_absolutism[3].opts.mc.attempts[3].assign("There is no concept of estates.");
+ question_absolutism[3].opts.mc.attempts[2].assign("First estate were least powerfull(royal) , second being second least powerfull (clergy), and third being most powerfull(most population)");
+
+
 }

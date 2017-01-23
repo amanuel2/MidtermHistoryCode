@@ -33,7 +33,7 @@ void Quiz::rel_handler()
 {
  num_questions = 8;
  string answer_user;
- cout << "***Religion (overview) multiple choice questions***" << endl;
+ cout << "***Religion (overview) multiple choice questions***" << endl << endl;
  for(int i=0; i<8; i++)
  {
    cout << "QUESTION #" << (i+1) << " : " << questions_religion[i].question << endl;
@@ -64,7 +64,7 @@ void Quiz::ren_handler()
 {
   num_questions = 4;
   string answer_user;
-  cout << "***Rennaisance multiple choice questions***" << endl;
+  cout << "***Rennaisance multiple choice questions***" << endl << endl;
   for(int i=0; i<4; i++)
   {
     cout << "QUESTION #" << (i+1) << " : " << questions_renaissance[i].question << endl;
@@ -89,7 +89,7 @@ void Quiz::ref_handler()
 {
   num_questions = 6;
   string answer_user;
-  cout << "***Reformation multiple choice questions***" << endl;
+  cout << "***Reformation multiple choice questions***" << endl << endl;
   for(int i=0; i<6; i++)
   {
     cout << "QUESTION #" << (i+1) << " : " << questions_reformation[i].question << endl;
@@ -112,13 +112,51 @@ void Quiz::ref_handler()
 
 void Quiz::exp_handler()
 {
-  cout << "Exploration HANDLER" << endl;
+  num_questions = 11;
+  string answer_user;
+  cout << "***Exploration multiple choice questions***" << endl << endl;
+  for(int i=0; i<11; i++)
+  {
+    cout << "QUESTION #" << (i+1) << " : " << questions_exploration[i].question << endl;
+    for(int j=0; j<4; j++)
+      cout << (j+1) << ") " << questions_exploration[i].opts.mc.attempts[j] << endl;
+    cout << endl << "What is your answer?(1-4) : ";
+    cin >> answer_user;
+    cout << endl;
+    int answer_user_index = atoi(answer_user.c_str());
+    answer_user = questions_exploration[i].opts.mc.attempts[answer_user_index-1];
+
+    if(answer_user.compare(questions_exploration[i].opts.answer)==0)
+     this->questions_right+=1;
+    else
+     this->questions_wrong+=1;
+  }
+  this->print_final_results();
 }
 
 
 void Quiz::abs_handler()
 {
-  cout << "Absolutism HANDLER" << endl;
+ num_questions = 4;
+ string answer_user;
+ cout << "***Absolutism multiple choice questions***" << endl << endl;
+ for(int i=0; i<4; i++)
+ {
+   cout << "QUESTION #" << (i+1) << " : " << question_absolutism[i].question << endl;
+   for(int j=0; j<4; j++)
+     cout << (j+1) << ") " << question_absolutism[i].opts.mc.attempts[j] << endl;
+   cout << endl << "What is your answer?(1-4) : ";
+   cin >> answer_user;
+   cout << endl;
+   int answer_user_index = atoi(answer_user.c_str());
+   answer_user = question_absolutism[i].opts.mc.attempts[answer_user_index-1];
+
+   if(answer_user.compare(question_absolutism[i].opts.answer)==0)
+    this->questions_right+=1;
+   else
+    this->questions_wrong+=1;
+ }
+ this->print_final_results();
 }
 
 Quiz::~Quiz()
